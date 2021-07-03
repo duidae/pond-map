@@ -13,7 +13,7 @@ const DefaultIcon = L.icon({
 });
 L.Marker.prototype.options.icon = DefaultIcon;
 
-var pondsGeojson = require("./ponds.json");
+const pondsGeojson = require("./ponds.json");
 
 export const Map = () => {
     const center: LatLngExpression = [24.977707, 121.277557];
@@ -30,8 +30,6 @@ export const Map = () => {
             </Marker>
         );
     });
-
-    console.log(pondsGeojson);
 
     return (
         <MapContainer center={center} zoom={12}>
